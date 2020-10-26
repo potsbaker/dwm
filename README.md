@@ -1,4 +1,4 @@
-MY DWM BUILD
+My custom DWM build.
 ============
 
 # Dependencies
