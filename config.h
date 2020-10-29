@@ -2,30 +2,31 @@ static const unsigned int borderpx    = 2;
 static const unsigned int snap        = 32;
 static const unsigned int gappx       = 6;
 static const int showbar              = 1;
-static const int topbar               = 1;
+static const int topbar               = 0;
 static const int horizpadbar          = 6;
 static const int vertpadbar           = 7;
 static const char *fonts[]            = {"Mononoki Nerd Font:size=9:antialias=true:autohint=true",
                                          "Hack:size=8:antialias=true:autohint=true",
                                          "JoyPixels:size=10:antialias=true:autohint=true"
 										};
-static const char col_gray1[]         = "#292d3e";
-static const char col_gray2[]         = "#292d3e";
-static const char col_gray3[]         = "#96b5b4";
-static const char col_gray4[]         = "#d7d7d7";
-static const char col_cyan[]          = "#924441";
-static const unsigned int baralpha    = 0xee; 
+static const char col_gray1[]         = "#121212";
+static const char col_gray2[]         = "#121212";
+static const char col_gray3[]         = "#303030";
+static const char col_gray4[]         = "#E8E8E8";
+static const char col_cyan[]          = "#121212";
+static const char col_desel[]         = "#878787";
+static const unsigned int baralpha    = 0xee;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]        = {
-	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+        [SchemeNorm] = { col_desel, col_gray1, col_gray1 },
+        [SchemeSel]  = { col_gray4, col_cyan,  col_gray1 },
 };
 static const unsigned int alphas[][3] = {
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+        [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+        [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "Term", "Music", "Net", "Draw", "Vim", "Pics", "Vids", "Games", "Chat" };
 
 static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
@@ -67,8 +68,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,     XK_k,      rotatestack,    {.i = -1 } },
 	{ MODKEY,               XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,               XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,               XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,               XK_d,      incnmaster,     {.i = -1 } },
+        { MODKEY,               XK_comma,  incnmaster,     {.i = +1 } },
+        { MODKEY,               XK_period, incnmaster,     {.i = -1 } },
 	{ MODKEY,               XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,               XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ControlMask,   XK_Return, zoom,           {0} },
@@ -88,10 +89,10 @@ static Key keys[] = {
 	{ MODKEY,               XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,     XK_0,      tag,            {.ui = ~0 } },
 
-	{ MODKEY,               XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,               XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,     XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,     XK_period, tagmon,         {.i = +1 } },
+        { Mod4Mask,             XK_1,      focusmon,       {.i = -1 } },
+        { Mod4Mask,             XK_2,      focusmon,       {.i = +1 } },
+        { Mod4Mask|ShiftMask,   XK_1,      tagmon,         {.i = -1 } },
+        { Mod4Mask|ShiftMask,   XK_2,      tagmon,         {.i = +1 } },
 	
 	TAGKEYS(                  XK_1,          0)
 	TAGKEYS(                  XK_2,          1)
