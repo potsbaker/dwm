@@ -9,8 +9,9 @@ My custom DWM build.
 + dmenu
 
 # AUR Dependencies
-+ nerd-fonts-complete (optional)
-+ https://aur.archlinux.org/packages/libxft-bgra/ (needed for colored fonts and emojis)
++ nerd-fonts-mononoki
++ libxft-bgra
++ ttf-sazanami
 
 # Installation
 - make
