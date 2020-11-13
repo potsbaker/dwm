@@ -35,7 +35,7 @@ static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "
 
 static const Rule rules[] = {
         { "Gimp",     NULL,       NULL,       0,            1,           -1 },
-        { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+        { "Firefox",  NULL,       NULL,       1 << 9,       0,           -1 },
 };
 
 static const float mfact     = 0.50;
