@@ -1,11 +1,11 @@
 static const unsigned int borderpx    = 2;
-static const unsigned int snap        = 32;
+static const unsigned int snap        = 8;
 static const unsigned int gappx       = 6;
 static const int showbar              = 1;
 static const int topbar               = 1;
 static const int horizpadbar          = 6;
-static const int vertpadbar           = 10;
-static const char *fonts[]            = {"Mononoki Nerd Font:size=9:antialias=true:autohint=true",
+static const int vertpadbar           = 12;
+static const char *fonts[]            = {"Mononoki Nerd Font:size=10:antialias=true:autohint=true",
                                          "Hack:size=8:antialias=true:autohint=true",
                                          "JoyPixels:size=10:antialias=true:autohint=true"
                                                                                 };
@@ -31,7 +31,7 @@ static const unsigned int alphas[][3] = {
         [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
 static const Rule rules[] = {
         { "Gimp",     NULL,       NULL,       0,            1,           -1 },
